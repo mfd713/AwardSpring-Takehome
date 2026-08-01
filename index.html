@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northwestern Course Planner</title>
+    <meta
+      name="description"
+      content="A responsive student dashboard for planning a four-course quarter."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Quarter planning dashboard</p>
+          <h1>Jane Doe - 2nd Year - Political Science</h1>
+        </div>
+        <div class="hero__summary" aria-label="Current course planning summary">
+          <div class="summary-card">
+            <span class="summary-card__label">Selected courses</span>
+            <strong id="selected-count">0 / 4</strong>
+          </div>
+          <div class="summary-card">
+            <span class="summary-card__label">Spots left</span>
+            <strong id="spots-left">4</strong>
+          </div>
+          <div class="summary-card">
+            <span class="summary-card__label">Shortlist</span>
+            <strong id="shortlist-count">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="selection-section" aria-labelledby="selection-title">
+        <div class="section-heading">
+          <h2 id="selection-title">Final selections</h2>
+          <p>Choose up to four classes for the quarter.</p>
+        </div>
+        <div id="selected-courses" class="selection-list"></div>
+      </section>
+
+      <section class="controls" aria-label="Course discovery controls">
+        <label class="control">
+          <span class="control__label">Search courses</span>
+          <input id="search-input" type="search" placeholder="Search by title, professor, or topic" />
+        </label>
+
+        <label class="control">
+          <span class="control__label">Minimum rating</span>
+          <select id="rating-filter">
+            <option value="0">Any rating</option>
+            <option value="3.5">3.5+</option>
+            <option value="4">4.0+</option>
+            <option value="4.5">4.5+</option>
+          </select>
+        </label>
+
+        <label class="control">
+          <span class="control__label">Course level</span>
+          <select id="level-filter">
+            <option value="all">All levels</option>
+            <option value="Introductory">Introductory</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </label>
+
+        <label class="control">
+          <span class="control__label">Order by</span>
+          <select id="sort-filter">
+            <option value="recommended">Recommended for Jane</option>
+            <option value="az">A–Z</option>
+            <option value="rating">Student rating</option>
+          </select>
+        </label>
+      </section>
+
+      <main class="dashboard-grid">
+        <section class="courses-panel" aria-labelledby="course-list-title">
+          <div class="section-heading">
+            <h2 id="course-list-title">Browse courses</h2>
+            <p>Tap a card to read the full description and student feedback.</p>
+          </div>
+          <div id="course-list" class="course-list"></div>
+        </section>
+
+        <aside class="sidebar" aria-labelledby="shortlist-title">
+          <div class="section-heading">
+            <h2 id="shortlist-title">Shortlist</h2>
+            <p>Collect a few favorites before committing to a schedule.</p>
+          </div>
+          <div id="shortlist-list" class="stack-list"></div>
+        </aside>
+      </main>
+    </div>
+
+    <div id="modal" class="modal" hidden>
+      <div class="modal__backdrop" data-close="modal"></div>
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal__close" type="button" data-close="modal" aria-label="Close details">
+          ×
+        </button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

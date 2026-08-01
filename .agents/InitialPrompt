@@ -1,0 +1,22 @@
+I am creating a small, quick take-home project for an interview with a startup. I want it to be a simple page built with html/css/typescript or a lightweight frontend framework with very simple startup.
+
+This is a dashboard screen for college students to plan their courses for the next quarter at their university (Northwestern style). They will choose 4 classes total
+
+User stories - assume all start with "as a student choosing courses,"
+1. I want to view my selected courses
+2. I want to see how many course spots I still have to fill
+3. I want to see a searchable list of courses that contain summary information, including: the course number and title, the professor/instructor name, how much other students reccomend the course, and a brief course description
+4. I want to be able to filter and order the course list. Filter by rating and course level, then order by reccomended (based on year, major, and ratings), A-Z, and previous student ratings
+5. I want to keep track of my class shortlist so that I can pick my courseload from that narrowed-down list
+
+Functional requirements:
+1. Courses respond in real-time to searching, filtering, and ordering
+2. Courses are shown as 'tiles' with the summary information
+3. Users can click on a course to expand it as an overlay and see the full course description and ratings by students who have taken the course
+4. User can move course tiles from the search list into their shortlist
+5. User can move course tiles into their final selections listed at the top of the page
+6. Design elements should be responsive to window sizes
+7. Webpage should follow general accessibility guidelines
+8. There should be 5 or fewer courses to start with. These are intended to show how course tiles can be moved around the UI
+
+The sample user is Jane Doe, a 2nd year political science student.
